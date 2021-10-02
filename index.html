@@ -8,7 +8,11 @@
   <script src="https://kit.fontawesome.com/7b9417aafe.js" crossorigin="anonymous"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -17,6 +21,7 @@
   <link rel="stylesheet" href="css/general.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/queries.css" />
+  <link rel="stylesheet" href="css/sal.css" />
   <!-- <script scr="script.js"></script> -->
   <title>Rajitha Girijadevi</title>
 </head>
@@ -29,6 +34,7 @@
       <a href="#case-studies">Case Studies</a>
       <a href="#about-me">About</a>
       <a href="#lets-connect">Contact</a>
+      <i class="fa fa-moon fa-2x" id="icon" aria-hidden="true"></i>
     </nav>
 
     <button class="btn-mobile-nav">
@@ -66,122 +72,132 @@
 
     <!-- case studies section -->
     <section class="case-studies" id="case-studies">
-      <div class="section-title">
-        <h2 class="heading-secondary">Case Studies</h2>
-      </div>
+      <div class="cs-container">
+        <div class="section-title">
+          <h2 class="heading-secondary">Case Studies</h2>
+        </div>
 
 
-      <div class="section-body">
-        <div class="container">
-          <div class="cs">
-            <div class="cs-text-box">
-              <div class="cs-text-content">
-                <h2 class="heading-secondary">LifeCheck</h2>
-                <p class="cs-text">
-                  <!-- LifeCheck is a mobile app that enables users to have better quality healthcare by proactively finding locatal healthcare providers covered by their insurance. -->
-                  iOS Mobile app with streamlined workflow for booking
-                  appointments with local healthcare professionals.
-                </p>
+        <div class="section-body">
+          <div class="container">
+            <div class="cs">
+              <div class="cs-text-box">
+                <div class="cs-text-content">
+                  <h2 class="heading-secondary">LifeCheck</h2>
+                  <p class="cs-text">
+                    <!-- LifeCheck is a mobile app that enables users to have better quality healthcare by proactively finding locatal healthcare providers covered by their insurance. -->
+                    iOS Mobile app with streamlined workflow for booking
+                    appointments with local healthcare professionals.
+                  </p>
 
-                <button class="btn btn--full">View Case Study</button>
+                  <button class="btn btn--full">View Case Study</button>
+                </div>
+              </div>
+              <div class="cs-img-box-1 case-study-img" role="img" aria-label="">
+                <img src="images/lifecheck-no bg.png" alt="LifeCheck mobile view">
               </div>
             </div>
-            <div class="cs-img-box-1 case-study-img" role="img" aria-label="">
-              <img src="images/lifecheck-no bg.png" alt="LifeCheck mobile view">
+
+            <div class="cs">
+
+
+              <div class="cs-text-box">
+                <div class="cs-text-content">
+                  <h2 class="heading-secondary">National Veterans Outreach</h2>
+                  <p class="cs-text">
+                    Resposive website redesign for a non-profit organization.
+                  </p>
+
+                  <button class="btn btn--full">View Case Study</button>
+                </div>
+              </div>
+              <div class="cs-img-box-2 case-study-img" role="img" aria-label="NVOP Resposive"> <img
+                  src="images/NVOP_cover.png" alt="LifeCheck mobile view">
+              </div>
+
             </div>
-          </div>
 
-          <div class="cs">
+            <div class="cs">
+              <div class="cs-text-box">
+                <div class="cs-text-content">
+                  <h2 class="heading-secondary">U.S. Department Of Labor</h2>
+                  <p class="cs-text">
+                    Redesigning the Government Agency Home page based on research
+                    results.
+                  </p>
 
-
-            <div class="cs-text-box">
-              <div class="cs-text-content">
-                <h2 class="heading-secondary">National Veterans Outreach</h2>
-                <p class="cs-text">
-                  Resposive website redesign for a non-profit organization.
-                </p>
-
-                <button class="btn btn--full">View Case Study</button>
+                  <button class="btn btn--full">View Case Study</button>
+                </div>
+              </div>
+              <div class="cs-img-box-3 case-study-img" role="img" aria-label="Department of Labor Resposive"> <img
+                  src="images/dol-no bg.png" alt="LifeCheck mobile view">
               </div>
             </div>
-            <div class="cs-img-box-2 case-study-img" role="img" aria-label="NVOP Resposive"> <img
-                src="images/NVOP_cover.png" alt="LifeCheck mobile view">
-            </div>
 
           </div>
-
-          <div class="cs">
-            <div class="cs-text-box">
-              <div class="cs-text-content">
-                <h2 class="heading-secondary">U.S. Department Of Labor</h2>
-                <p class="cs-text">
-                  Redesigning the Government Agency Home page based on research
-                  results.
-                </p>
-
-                <button class="btn btn--full">View Case Study</button>
-              </div>
-            </div>
-            <div class="cs-img-box-3 case-study-img" role="img" aria-label="Department of Labor Resposive"> <img
-                src="images/dol-no bg.png" alt="LifeCheck mobile view">
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
     <!-- about me section -->
     <section class="about-me" id="about-me">
-      <div class="section-title">
-        <h2 class="heading-secondary">About Me</h2>
-      </div>
-    </section>
+      <div class="about-me-container">
+        <div class="section-title">
+          <h2 class="heading-secondary">About Me</h2>
+        </div>
 
-    <section class="section-aboutme">
-      <div class="container">
-        <div class="cs-about-me">
-          <div class="aboutme-text-box">
-            <h2 class="heading-secondary">A little bit about myself</h2>
-            <ul class="list-details">
-              <li class="about-me-details-1">
-                I’m Rajitha Girijadevi, an enthusiastic product designer who
-                specialize in consumer products with complex data into simple
-                elegant solutions.
-              </li>
-              <li class="about-me-details-2">
-                With my 15yrs of Digital industry experience in technology,
-                data, business and management, I strive to maintain a healthly
-                balance between functionality and visual impact in all my work.
-              </li>
-              <li class="about-me-details-3">
-                Team work, diversity and inclusion, stay humble, keep learning
-                are some of my core values.
-              </li>
-              <li class="about-me-details-4">
-                I am always on the lookout to collaborate on innovative projects, hackathons
-                and design charrettes.
-              </li>
-            </ul>
-          </div>
-          <div class="about-me-right">
-            <ul class="list-skills">
-              <li class="skill-1">Product strategy and ideation</li>
-              <li class="skill-2">Usability and Accessibility heuristics</li>
-              <li class="skill-3">User research and testing</li>
-              <li class="skill-4">Competitor & Market analysis</li>
-              <li class="skill-5">Wireframing and iteration</li>
-              <li class="skill-6">Low and high fidelity prototyping</li>
-              <li class="skill-7">Style guides and Interaction design</li>
-              <li class="skill-8">Layout and typography</li>
-              <li class="skill-9">Leadership Skills</li>
-            </ul>
+
+        <div class="section-aboutme">
+          <div class="container">
+            <div class="cs-about-me">
+              <div class="aboutme-text-box">
+                <h2 class="heading-secondary">A little bit about myself</h2>
+                <ul class="list-details">
+                  <li class="about-me-details-1">
+                    I’m Rajitha Girijadevi, an enthusiastic product designer who
+                    specialize in consumer products with complex data into simple
+                    elegant solutions.
+                  </li>
+                  <li class="about-me-details-2">
+                    With my 15yrs of Digital industry experience in technology,
+                    data, business and management, I strive to maintain a healthly
+                    balance between functionality and visual impact in all my work.
+                  </li>
+                  <li class="about-me-details-3">
+                    Team work, diversity and inclusion, stay humble, keep learning
+                    are some of my core values.
+                  </li>
+                  <li class="about-me-details-4">
+                    I am always on the lookout to collaborate on innovative projects, hackathons
+                    and design charrettes.
+                  </li>
+                </ul>
+              </div>
+              <div class="about-me-right">
+                <ul class="list-skills">
+                  <li class="skill-1">Product strategy and ideation</li>
+                  <li class="skill-2">Usability and Accessibility heuristics</li>
+                  <li class="skill-3">User research and testing</li>
+                  <li class="skill-4">Competitor & Market analysis</li>
+                  <li class="skill-5">Wireframing and iteration</li>
+                  <li class="skill-6">Low and high fidelity prototyping</li>
+                  <li class="skill-7">Style guides and Interaction design</li>
+                  <li class="skill-8">Layout and typography</li>
+                  <li class="skill-9">Leadership Skills</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
   <!-- lets connect section -->
+  <div id="toTop">
+    <i class="fas fa-chevron-circle-up fa-6x" id="toTopButton" style="color: #ea4c89"></i>
+  </div>
+
+  <div id="topSticky"></div>
 
   <footer class="lets-connect" id="lets-connect">
     <div class="section-title">
@@ -209,5 +225,16 @@
   </footer>
 
 </body>
+
+<script src="/scripts/sal.js">
+  sal({
+    threshold: 1,
+    once: false,
+  });
+
+</script>
+
+<script src="/scripts/script.js">
+</script>
 
 </html>

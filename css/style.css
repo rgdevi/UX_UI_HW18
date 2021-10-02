@@ -1,5 +1,27 @@
+:root {
+  --primary-color:#fff;
+  --secondary-color:#d63e77;
+  --aux-color:#f2f1fc;
+  --font-primary:#25282b;
+  --font-secondary: #828282;
+  --aux-font:#25282B;
+  --card-bg:#fff;
+  --mobile-nav: #333;
+}
+
+.dark-theme{
+  --primary-color:#121212;
+  --secondary-color:#DD5E8D;
+  --aux-color:#DEDBF9;
+  --font-primary:#CCC7BC;
+  --font-secondary: #8C8A81;
+  --card-bg:#272727;
+  --mobile-nav: #CCC7BC;
+}
+
 header {
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: var(--primary-color);
 }
 
 .header {
@@ -33,7 +55,7 @@ header {
   font-weight: normal;
   font-size: 4rem;
   line-height: 3rem;
-  color: #d63e77;
+  color:var(--secondary-color);
 }
 
 .navbar-items a {
@@ -45,15 +67,20 @@ header {
   font-weight: 400;
   font-size: 2rem;
   line-height: 28px;
-  color: #25282b;
+  color:var(--font-primary);
   text-underline-offset: 0.4em;
 }
 
 .navbar-items a:hover {
-  color: #d63e77;
+  color: var(--secondary-color);
   transition: all 0.4ms;
   text-decoration: underline;
   text-underline-offset: 0.4em;
+}
+
+#icon {
+cursor: pointer;
+color: var(--font-primary);
 }
 
 /**************************/
@@ -61,8 +88,7 @@ header {
 /**************************/
 
 .section-hero {
-  /* background-color: #f9f9f9; */
-  /* padding: 4.8rem 0 9.6rem 0; */
+ 
   padding: 4.8rem 0 9.6rem 0;
 }
 
@@ -75,6 +101,7 @@ header {
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
   align-items: center;
+  animation: fadein 1s linear forwards;
 }
 
 /* .hero {
@@ -95,7 +122,14 @@ header {
   line-height: 27px;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: #d63e77;
+  color:var(--secondary-color);
+  animation: fadein 0.5s linear forwards;
+
+}
+
+.heading-primary {
+  animation: fadein 2s linear forwards;
+
 }
 
 .hero-description {
@@ -105,33 +139,51 @@ header {
   font-family: Poppins;
   font-style: normal;
   font-weight: normal;
-  color: #828282;
+  color: var(--font-secondary);
+  animation: fadein 3s linear forwards;
+ 
 }
 
 .hero-img {
   width: 90%;
 }
 
+.hero-img-box {
+  animation: fadeInRight 3s;
+  
+}
+
+@keyframes fadeInRight {
+  0% {
+     opacity: 0;
+     transform: translateX(90rem);
+  }
+  100% {
+     opacity: 1;
+     transform: translateX(0);
+  }
+} ;
+
 /**************************/
 /* CASE STUDIES SECTION */
 /**************************/
 
 .case-studies {
-  /* background-color: #f9f9f9; */
+  
   padding-bottom: 2rem;
   padding-right: 2rem;
   /* margin-left: 4rem; */
 }
 
 .section-title {
-  color: #25282b;
+  color:var(--font-primary);
   text-align: center;
   /* margin-top: 14rem; */
   margin-bottom: 8rem;
   padding-top: 2rem;
 
   text-decoration: underline;
-  text-decoration-color: rgb(214, 62, 119);
+  text-decoration-color:var(--secondary-color);
   text-underline-offset: 1.5em;
 }
 
@@ -141,25 +193,32 @@ header {
   padding: 4.8rem 0 9.6rem 0;
 }
 
+/* .section-aboutme .container {
+  animation: fadein 3s linear forwards;
+
+
+} */
+
 .cs {
-  display: grid;
+  display: grid; 
   grid-template-columns: 2fr 2fr;
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
   /* box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); */
   border-radius: 11px;
   overflow: hidden;
-  margin-bottom: 10rem;
+  margin-bottom: 10rem; 
   transition: all 0.4s;
+  animation: fadein 3s linear forwards;
 }
 
 .cs:hover {
-  transform: translateY(-1.2rem);
+  /* transform: translateY(-1.2rem); */
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
 .cs-text-box {
   /* padding: 4.8rem 4.8rem 12.4rem 6.4rem; */
-  background-color: white;
+  background-color: var(--card-bg);
   height: 100%;
   width: 100%;
   padding-left: 6.4rem;
@@ -174,7 +233,7 @@ header {
 }
 
 .cs .heading-secondary {
-  color: #25282b;
+  color: var(--font-primary);
   margin-bottom: 3.2rem;
   font-size: 40px;
   line-height: 60px;
@@ -186,7 +245,7 @@ header {
   font-size: 2rem;
   line-height: 150%;
   margin-bottom: 4.8rem;
-  color: #828282;
+  color: var(--font-secondary);
   /* padding-top: 1rem; */
   font-family: Poppins;
   font-style: normal;
@@ -229,12 +288,8 @@ header {
 /* ABOUT ME SECTION */
 /**************************/
 
-/* .about-me {
-  background-color: #f9f9f9;
-  padding: 4rem 0 0rem 0;
-} */
 .section-aboutme .cs {
-  background-color: white;
+  background-color:var(--card-bg);
 }
 
 .cs-about-me {
@@ -248,11 +303,12 @@ header {
 }
 
 .cs-about-me:hover {
-  transform: translateY(-1.2rem);
+  /* transform: translateY(-1.2rem); */
   box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 .aboutme-text-box {
   padding: 4.8rem 6.4rem 4rem;
+  background-color: var(--card-bg);
 }
 .list-details li {
   font-family: Poppins;
@@ -260,7 +316,7 @@ header {
   font-weight: normal;
   font-size: 2rem;
   line-height: 150%;
-  color: #828282;
+  color:var(--font-secondary);
   padding-bottom: 2rem;
   padding-right: 2rem;
   list-style: none;
@@ -271,7 +327,7 @@ header {
 }
 
 .section-aboutme .about-me-right {
-  background-color: #f2f1fc;
+  background-color:var(--aux-color);
   height: 100%;
   width: 100%;
   padding-top: 8.5rem;
@@ -283,7 +339,7 @@ header {
   font-weight: normal;
   font-size: 18px;
   line-height: 150%;
-  color: #25282b;
+  color:var(--aux-font);
   list-style: none;
   padding-bottom: 2rem;
   padding-right: 2rem;
@@ -298,7 +354,7 @@ header {
 /**************************/
 
 .lets-connect {
-  /* background-color: #f9f9f9; */
+  
   padding: 4rem 0 4rem 0;
 }
 .message {
@@ -315,7 +371,7 @@ header {
   font-weight: normal;
   font-size: 18px;
   line-height: 27px;
-  color: #828282;
+  color: var(--font-secondary);
 }
 
 .faicon {
@@ -357,7 +413,7 @@ i:focus {
   font-weight: lighter;
   font-size: 16px;
   line-height: 22px;
-  color: #828282;
+  color:var(--font-secondary);
 }
 
 /* MOBILE */
@@ -372,9 +428,54 @@ i:focus {
 .icon-mobile-nav {
   height: 4.8rem;
   width: 4.8rem;
-  color: #333;
+  color:var(--mobile-nav);
 }
 
 .icon-mobile-nav[name="close-outline"] {
   display: none;
+}
+
+/**************************/
+/* DARK MODE SECTION */
+/**************************/
+
+
+
+
+/* Scroll to top */
+
+#toTop {
+  padding: 5px 3px;
+  color: var(--primary-color);
+  position: fixed;
+  bottom: 10rem;
+  right: 5rem;
+  width: 7rem;
+  height:7rem;
+  display: none;
+  cursor: pointer;
+
+}
+
+
+#topSticky {
+  padding: 5px 3px;
+  background: var(--font-primary);
+  color: var(--primary-color);
+  width: 15rem;;
+  height: 5rem;
+  position: fixed;
+  top: 4rem;
+  right: 5rem;
+  opacity: 0.7;
+
+}
+
+/* Animations */
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+
 }
