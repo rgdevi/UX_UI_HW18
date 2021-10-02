@@ -25,6 +25,11 @@ $("#toTopButton").click(function () {
     $("#icon").toggleClass("fa-sun fa-moon");
   });
 
+  sal({
+    threshold: 0.1,
+    once: false,
+  });
+
 
  // ScrollReveal
 

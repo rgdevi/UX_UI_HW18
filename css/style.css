@@ -101,7 +101,7 @@ color: var(--font-primary);
   grid-template-columns: 1fr 1fr;
   gap: 9.6rem;
   align-items: center;
-  animation: fadein 1s linear forwards;
+  /* animation: fadein 1s linear forwards; */
 }
 
 /* .hero {
@@ -123,14 +123,14 @@ color: var(--font-primary);
   text-transform: uppercase;
   margin-bottom: 1rem;
   color:var(--secondary-color);
-  animation: fadein 0.5s linear forwards;
+  /* animation: fadein 0.5s linear forwards; */
 
 }
 
-.heading-primary {
+/* .heading-primary {
   animation: fadein 2s linear forwards;
 
-}
+} */
 
 .hero-description {
   font-size: 2rem;
@@ -140,7 +140,7 @@ color: var(--font-primary);
   font-style: normal;
   font-weight: normal;
   color: var(--font-secondary);
-  animation: fadein 3s linear forwards;
+  /* animation: fadein 3s linear forwards; */
  
 }
 
@@ -148,10 +148,10 @@ color: var(--font-primary);
   width: 90%;
 }
 
-.hero-img-box {
+/* .hero-img-box {
   animation: fadeInRight 3s;
   
-}
+} */
 
 @keyframes fadeInRight {
   0% {

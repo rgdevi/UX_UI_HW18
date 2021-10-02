@@ -140,9 +140,9 @@ body {
   letter-spacing: 0.75px;
 }
 
-.btn {
+/* .btn {
   animation: fadein 3s;
-}
+} */
 .btn,
 .btn:link,
 .btn:visited {
